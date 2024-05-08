@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ver Lista de Convidados Atualizada</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    button {
+        padding: 15px 30px;
+        font-size: 18px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        outline: none;
+        animation: pulse 1.5s infinite alternate; /* Adiciona animação de pulso */
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    button:active {
+        transform: translateY(1px);
+    }
+    button:focus {
+        box-shadow: 0 0 0 2px #007bff, 0 0 0 4px rgba(0, 123, 255, 0.3);
+    }
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.05);
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Botão para redirecionar para o Google Sheets -->
+<button id="redirectButton">Ver Lista de Convidados Atualizada</button>
+
+<script>
+// Função para redirecionar para o link especificado
+function redirecionarParaNovoLink() {
+    // Coloque aqui o novo link de redirecionamento
+    var novoLink = 'https://docs.google.com/spreadsheets/d/1W9XgzUdZaSP5E1hXMRFJTnco-dErFy-6AmTzLUa86Hs/edit?usp=sharing';
+    window.location.href = novoLink;
+}
+
+// Evento de clique no botão
+document.getElementById('redirectButton').addEventListener('click', redirecionarParaNovoLink);
+</script>
+
+</body>
+</html>
